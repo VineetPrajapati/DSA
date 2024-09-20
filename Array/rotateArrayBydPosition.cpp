@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 void roateArray(vector<int> &arr, int d)
@@ -29,25 +30,52 @@ void roateArray(vector<int> &arr, int d)
     }
 }
 
+void rotateOneByOne(vector<int> &arr, int d)
+{
+    int size = arr.size();
+
+    for (int i = 0; i < d; i++)
+    {
+
+        int first = arr[0];
+
+        for (int j = 0; j < size - 1; j++)
+        {
+            arr[j] = arr[j + 1];
+        }
+
+        arr[size - 1] = first;
+    }
+}
 int main()
 {
-    vector<int> arr = {1, 2, 3, 4, 5, 6, 7};
 
-    int d = 2;
+    vector<int> arr = {1, 2, 3, 4, 5, 6};
 
-    cout<<"Initial Array is : ";
-    for (int i = 0; i < arr.size(); i++){
-        cout<<arr[i]<<" ";
-    }
+    rotateOneByOne(arr, 3);
 
-    roateArray(arr, d);
-
-    cout << "\n Rotated array will be : ";
-
-    for (int i = 0; i < arr.size(); i++)
+    for (int val : arr)
     {
-        cout << arr[i] << " ";
+        cout << val << " ";
     }
 
-    return 0;
+    // {vector<int> arr = {1, 2, 3, 4, 5, 6, 7};
+
+    // int d = 2;
+
+    // cout<<"Initial Array is : ";
+    // for (int i = 0; i < arr.size(); i++){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    // roateArray(arr, d);
+
+    // cout << "\n Rotated array will be : ";
+
+    // for (int i = 0; i < arr.size(); i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+
+    // return 0;}
 }
