@@ -1,6 +1,12 @@
 #include <iostream>
+#include<vector>
 #include <algorithm>
 using namespace std;
+
+void sort(vector<int> &arr)
+{
+    sort(arr.begin(), arr.end());
+}
 
 // ***********Sort an array of 0s, 1s and 2s***********
 
@@ -116,18 +122,18 @@ int main()
 
     // ***********Bubble Sort***********
 
-    {
+    // {
 
-        int arr[] = {10, 1, 7, 6, 14, 9};
-        int size = sizeof(arr) / sizeof(arr[0]);
+    //     int arr[] = {10, 1, 7, 6, 14, 9};
+    //     int size = sizeof(arr) / sizeof(arr[0]);
 
-        bubbleSort(arr, size);
+    //     bubbleSort(arr, size);
 
-        for (int i = 0; i < size; i++)
-        {
-            cout << arr[i] << " ";
-        }
-    }
+    //     for (int i = 0; i < size; i++)
+    //     {
+    //         cout << arr[i] << " ";
+    //     }
+    // }
 
     return 0;
 }
